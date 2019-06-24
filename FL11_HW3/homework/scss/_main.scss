@@ -1,30 +1,60 @@
 @media screen {
     body {
-        background-color: $bodyBackgroundColor;
+        background-color: $hind $bodyBackgroundColor;
         font-family: $sourceSans;
-        line-height: 1.6;
-        height:100%;
+        line-height: 1.6;        
         display: flex;
         flex-direction: column;
+        
+    }
+    body * {
+        border: 2px solid red;
     }
     .header {
+        display: flex;
         background-image: url($headerImg);        
-        height: 623px;
-        max-width: 88%;
-        margin: 0 auto;
-        padding-right: 10px;
-        padding-left: 10px;
-        background-size: cover;
-        background-position: center;
+        height: 75vh;
+        width: 136vh;                 
+        background-size: contain;
+        align-self: center;
         background-repeat: no-repeat;
-        border-bottom-right-radius: 40%;
+        border-bottom-right-radius: 40%;      
+    }
+    .header-wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 35vh;
+        //justify-content: space-between;
+        width: 40%;
+        //margin: 0 auto;        
+    }
+    .landing-logo {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        height: 10%;
+        justify-content: space-around;
+        align-items: center;
 
-        .header-wrap {
-            justify-content: flex-start;
-            max-width: 72%;
-            margin: 0 auto;
-            
+        
+        img {
+            display: flex;
+            height: 5vh;
+            width: 5vh;
+        }
+        p {            
+            display: flex;
+            flex-direction: column;
+            text-align: center;            
+            font-weight: bold;
+            font-size: 2.5vh;
+        }
+        span {                      
+            font-weight: 500;
+            font-size: 1.25vh;
+            text-align: center;
         }
     }
+
 
 }
