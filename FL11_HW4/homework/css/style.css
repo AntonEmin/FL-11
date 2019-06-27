@@ -1,0 +1,22 @@
+:root {
+    --button-color : #097774;
+    --main-background-color : #F3F3F3;
+    --border-color :#000000;
+
+}
+body {
+    min-width: 900px;
+    margin: 0;
+    min-height: 500px;
+    height: 1px;
+    background-color: var(--main-background-color);
+}
+ .header {
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/sample2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }  
