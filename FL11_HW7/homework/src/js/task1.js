@@ -48,5 +48,5 @@ if (email === '' || email === null ) {
         }   
     } else {
             alert('I don’t know you');
-        }
     }
+}

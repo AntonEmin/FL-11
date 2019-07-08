@@ -40,11 +40,11 @@ if (confirm('Do you want to play a game?')) {
             attempts -= 1;
         } while(attempts > 0)
         if (gameWin) {
-            if (confirm('Congratulation, you won!\nYour prize is: '+totalPrize+'$\nDo you want to continue?')) {
+            if (confirm('Congratulation, you won!\nYour prize is: '+ totalPrize +'$\nDo you want to continue?')) {
                 loop += 1;
                 attempts = firstAttempt;
             } else {
-                alert('Thank you for your participation.\nYour prize is: '+totalPrize+'$');
+                alert('Thank you for your participation.\nYour prize is: '+ totalPrize +'$');
                 if (confirm('Do you want to play again?')) {
                     loop += 1;
                     attempts = firstAttempt;
@@ -53,7 +53,7 @@ if (confirm('Do you want to play a game?')) {
                 }
             }
         } else {
-            alert('Thank you for your participation.\nYour prize is: '+totalPrize+'$');
+            alert('Thank you for your participation.\nYour prize is: '+ totalPrize +'$');
             if (confirm('Do you want to play again?')) {
                 attempts =firstAttempt;
             } else {
