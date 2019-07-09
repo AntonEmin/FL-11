@@ -1,4 +1,3 @@
-// Your code goes here
 let cord = prompt('Enter your 6 coordinates like (x y). ').split(' ');
 for (let i = 0; i < cord.length; i++) {
     cord[i] = parseFloat(cord[i]);

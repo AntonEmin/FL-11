@@ -1,4 +1,3 @@
-// Your code goes here
 let sides = prompt('Write 3 triangle sides length').split(' ');
 let a = 0;
 let b = 1;
