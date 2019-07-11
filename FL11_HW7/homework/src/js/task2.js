@@ -13,8 +13,7 @@ if (confirm('Do you want to play a game?')) {
     let gameWin = false;
     while(wantPlayGame === true) {
         let randomRange = startRange + rangeStep*loop;
-        let randomNumber = Math.floor(Math.random() * randomRange);
-        console.log(randomNumber);        
+        let randomNumber = Math.floor(Math.random() * randomRange);                
         while(attempts > 0) {
             let prizePull = 0;
             const prizePullStep = 2;
@@ -37,8 +36,7 @@ if (confirm('Do you want to play a game?')) {
             } else {
                 alert('You guessed wrong number.')
             }
-            attempts -= 1;                           
-            
+            attempts -= 1;
         } 
         if (gameWin) {
             if (confirm('Congratulation, you won!\nYour prize is: '+ totalPrize +'$\nDo you want to continue?')) {
@@ -49,7 +47,7 @@ if (confirm('Do you want to play a game?')) {
                 totalPrize = 0;
                 alert('Thank you for your participation.\nYour prize is: '+ totalPrize +'$');
                 if (confirm('Do you want to play again?')) {
-                    loop += 1;
+                    loop = 0;
                     attempts = firstAttempt;
                 } else {
                     wantPlayGame =false;

@@ -22,8 +22,7 @@ if (email === '' || email === null ) {
                         alert('Canceled.');
                     } else {
                         if( tempPassword === password) {
-                            tempPassword = prompt('Enter your new password','');
-                            console.log(tempPassword);
+                            tempPassword = prompt('Enter your new password','');                            
                             const minLengthPassword = 5;                                                        
                             if (tempPassword.length < minLengthPassword) {
                                 alert('It’s too short password. Sorry.');
