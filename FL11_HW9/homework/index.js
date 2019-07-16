@@ -46,41 +46,60 @@ function getNumbers (str) {
 }
 //First task
 function findTypes (...args) {
-    let types = {
-        number: 0,
-        object: 0,
-        string: 0,
-        booleans: 0,
-        undefined : 0,
-        symbol : 0,
-        function : 0,
-        bigint : 0
-    }
+    let types = {}
     for (let i = 0; i < args.length;i++) {
         switch (typeof args[i]) {
             default :
                 types.undefined++;
                 break;
-            case 'number' :
-                types.number++;
+            case 'number' : 
+                if (types.number) {
+                    types.number++;
+                } else {
+                    types.number = 1;
+                }
                 break;
             case 'object' : 
-                types.object++;
+                if (types.object) {
+                    types.object++;
+                } else {
+                    types.object = 1;
+                }
                 break;
             case 'boolean' :
-                types.booleans++;
+                if (types.boolean) {
+                    types.boolean++;
+                } else {
+                    types.boolean = 1;
+                }
                 break;
             case 'string' :
-                types.string++;
+                if (types.string) {
+                    types.string++;
+                } else {
+                    types.string = 1;
+                }
                 break;
             case 'symbol' :
-                types.symbol++;
+                if (types.symbol) {
+                    types.symbol++;
+                } else {
+                    types.symbol = 1;
+                }
                 break;
             case 'function' :
-                types.function++;
+                if (types.function) {
+                    types.function++;
+                } else {
+                    types.function = 1;
+                }
                 break;
             case 'bigint' : 
-                types.bigint++;
+                if (types.bigint) {
+                    types.bigint++;
+                } else {
+                    types.bigint = 1;
+                }
                 break;
         }
     }
