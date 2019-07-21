@@ -75,11 +75,11 @@ function battle (firstFighter, secondFighter) {
             }
         }
         if (firstFighter.isDead()) {
-            firstFighter.addWin();
-            secondFighter.addLoss();
-        } else {
             firstFighter.addLoss();
-            secondFighter.addWin();        
+            secondFighter.addWin();
+        } else {
+            firstFighter.addWin();
+            secondFighter.addLoss();        
         }
     }
 }
