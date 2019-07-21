@@ -64,9 +64,9 @@ class Fighter {
 
 function battle (firstFighter, secondFighter) {    
     if (firstFighter.isDead()) {
-        console.log(`${firstFighter.getName} is dead and can&#39;t fight.`);
+        console.log(`${firstFighter.getName} is dead and can't fight.`);
     } else if (secondFighter.isDead()) {
-        console.log(`${secondFighter.getName} is dead and can&#39;t fight.`);
+        console.log(`${secondFighter.getName} is dead and can't fight.`);
     } else {
         while (!firstFighter.isDead() && !secondFighter.isDead()) {
             firstFighter.attack(secondFighter);
