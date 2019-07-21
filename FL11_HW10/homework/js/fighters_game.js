@@ -23,17 +23,17 @@ class Fighter {
 
     dealDamage (amountOfDamage) {
         const MIN_HEALTH_VALUE = 0;
-        this.getHealth -= amountOfDamage;
+        this._hp -= amountOfDamage;
         if (this.getHealth < MIN_HEALTH_VALUE) {
-            this.getHealth = MIN_HEALTH_VALUE;
+            this._hp = MIN_HEALTH_VALUE;
         }
     }
     heal (amountOfHeal) {
         if (amountOfHeal > this._MAX_HEALTH) {
-            this.getHealth = this._MAX_HEALTH;
+            this._hp = this._MAX_HEALTH;
 
         } else {
-            this.getHealth += amountOfHeal;
+            this._hp += amountOfHeal;
         }
     }
     logCombatHistory () {
@@ -49,7 +49,7 @@ class Fighter {
         const MAX_CHANCE_OF_ATTACK = 100;        
         let chanceOfAttack = MAX_CHANCE_OF_ATTACK - fighterName.getAgility;
         let hit = Math.floor(Math.random() * MAX_CHANCE_OF_ATTACK) + 1;
-        let hitTheTarget = hit < chanceOfAttack; 
+        let hitTheTarget = hit <= chanceOfAttack; 
         if (hitTheTarget) {
             fighterName.dealDamage(this.getDamage);
             console.log(`${this.getName} make ${this.getDamage} damage to ${fighterName.getName}`);   
