@@ -20,7 +20,6 @@ class Fighter {
     get getHealth () {
         return this._hp;
     }
-
     dealDamage (amountOfDamage) {
         const MIN_HEALTH_VALUE = 0;
         this._hp -= amountOfDamage;
@@ -61,7 +60,6 @@ class Fighter {
         return this.getHealth <= 0;    
     }
 }
-
 function battle (firstFighter, secondFighter) {    
     if (firstFighter.isDead()) {
         console.log(`${firstFighter.getName} is dead and can't fight.`);
